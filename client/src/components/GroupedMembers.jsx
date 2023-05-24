@@ -2,7 +2,30 @@ import React from "react";
 import { useState } from "react";
 
 const GroupedTeamMembers = ({ employees, selectedTeam, setTeam }) => {
-  function groupTeamMembers() {}
+  function groupTeamMembers() {
+    var teams = [];
+
+    var teamAmembers = employees.filter(
+      (employee) => employee.teamName === "teamA"
+    );
+    var teamA = {};
+    teams.push();
+
+    var teamBmembers = employees.filter(
+      (employee) => employee.teamName === "teamB"
+    );
+    teams.push(teamBmembers);
+
+    var teamCmembers = employees.filter(
+      (employee) => employee.teamName === "teamC"
+    );
+    teams.push(teamCmembers);
+
+    var teamDmembers = employees.filter(
+      (employee) => employee.teamName === "teamD"
+    );
+    teams.push(teamDmembers);
+  }
 
   const [groupedMembers, setGroupedData] = useState(groupTeamMembers());
 
