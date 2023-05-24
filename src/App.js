@@ -130,14 +130,6 @@ function App() {
     setEmployees(transformedEmployees);
   }
 
-
-  //const [count, setCount] = useState();
-
-  // useEffect(() => {
-  //   setCount(employees.filter((employee) => employee.teamName === selectedTeam).length)
-  //   localStorage.setItem('memcount', count);
-  // }, [count, selectedTeam, employees]);
-
   useEffect(() => {
     localStorage.setItem("employeeList", JSON.stringify(employees))
   }, [employees])
